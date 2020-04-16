@@ -1,16 +1,17 @@
 server:
   port: 3000
+  basePath: ''
 application:
   domain: juice-sh.op
-  name: 'Furniture Shop'
-  logo: JuiceShop_Logo.png
+  name: 'IKEA Furniture Shop'
+  logo: 'IKEA_LOGO.png'
   favicon: favicon_js.ico
-  theme: bluegrey-lightgreen
-  showVersionNumber: true
-  showGitHubLinks: true
+  theme: blue-lightblue # Options: bluegrey-lightgreen blue-lightblue deeppurple-amber indigo-pink pink-bluegrey purple-green deeporange-indigo
+  showVersionNumber: false
+  showGitHubLinks: false
   numberOfRandomFakeUsers: 0
   altcoinName: Juicycoin
-  privacyContactEmail: donotreply@owasp-juice.shop
+  privacyContactEmail: donotreply@FurnitureShop
   customMetricsPrefix: juiceshop
   social:
     twitterUrl: 'https://twitter.com/owasp_juiceshop'
@@ -66,47 +67,240 @@ application:
 challenges:
   showSolvedNotifications: true
   showHints: true
-  safetyOverride: false
   overwriteUrlForProductTamperingChallenge: 'https://owasp.slack.com'
   xssBonusPayload: '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771984076&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+  safetyOverride: false
 hackingInstructor:
   isEnabled: true
   avatarImage: juicyBot.png
 products:
   -
-    name: 'Apple Juice (1000ml)'
-    price: 1.99
+    name: 'Billy'
+    price: 39.95
+    deluxePrice: 29.95
     description: 'The all-time classic.'
-    image: apple_juice.jpg
+    image: 'billy.jpg'
     reviews:
       - { text: 'One of my favorites!', author: admin }
-# ~~~~~ ... ~~~~~~
   -
-    name: 'OWASP SSL Advanced Forensic Tool (O-Saft)'
-    description: 'O-Saft is an easy to use tool to show information about SSL certificate and tests the SSL connection according given list of ciphers and various SSL configurations.'
-    price: 0.01
-    image: orange_juice.jpg
+    name: 'Äpplarö'
+    description: 'Nice and easy for sitting outside'
+    price: 39.99
+    deluxePrice: 39.49
+    image: äpplarö.jpg
+  -
+    name: 'Äpplarö'
+    description: 'Even better for sitting outside'
+    price: 34.99
+    image: äpplaröbench.jpg
+    reviews:
+      - { text: 'I bought it, would buy again. 9/10', author: admin }
+  -
+    name: 'Besta'
+    description: 'Perfect for every 90 inch tv'
+    price: 39.99
+    image: besta.jpg
+  -
+    name: 'besynnerlig'
+    description: 'In case you ever needed a monkey to hold your candle'
+    price: 2.99
+    deluxePrice: 1.99
+    image: besynnerlig.jpg
+  -
+    name: 'Blabärsmott'
+    description: 'Goes incredibly well with the couch'
+    price: 9.99
+    image: blabärsmott.jpg
+    reviews:
+      - { text: 'Lovely. Just lovely', author: bender }
+  -
+    name: 'Böja'
+    description: 'Made from recycled wood'
+    price: 4.99
+    image: böja.jpg
+  -
+    name: 'Daim chocolate pie'
+    description: 'Best pie out there'
+    price: 3.49
+    image: daim.jpg
+  -
+    name: 'Djungelskog'
+    description: 'Both cute and scary at the same time'
+    price: 4.99
+    image: djungelskog.jpg
     urlForProductTamperingChallenge: 'https://www.owasp.org/index.php/O-Saft'
   -
-    name: 'Christmas Super-Surprise-Box (2014 Edition)'
-    description: 'Contains a random selection of 10 bottles (each 500ml) of our tastiest juices and an extra fan shirt for an unbeatable price!'
+    name: 'Ekenäset'
+    description: 'The chair that lasts for centuries'
     price: 29.99
-    image: undefined.jpg
+    image: ekenäset.jpg
     useForChristmasSpecialChallenge: true
   -
-    name: 'OWASP Juice Shop Sticker (2015/2016 design)'
-    description: 'Die-cut sticker with the official 2015/2016 logo. By now this is a rare collectors item. <em>Out of stock!</em>'
-    price: 999.99
-    image: sticker.png
-    deletedDate: '2017-04-28'
-# ~~~~~ ... ~~~~~~
+    name: 'Ekoln'
+    description: 'Perfect for all kinds of liquids <br/><span style="color:red;">This item has been made unavailable because of lack of safety standards.</span>'
+    price: 4.99
+    image: ekoln.jpg
+    keywordsForPastebinDataLeakChallenge:
+      - hueteroneel
+      - eurogium edule
   -
-    name: 'OWASP Juice Shop Logo (3D-printed)'
-    description: 'This rare item was designed and handcrafted in Sweden. This is why it is so incredibly expensive despite its complete lack of purpose.'
+    name: 'Ektorp'
+    description: 'Lovely couch. By now this is a rare collectors item. <em>Out of stock!</em>'
+    price: 999.99
+    image: ektorp.jpg
+    deletedDate: '2017-04-28'
+  -
+    name: 'Frakta'
+    description: 'The bag that keeps all your chocolate pies cool'
+    price: 5.99
+    image: frakta.jpg
+  -
+    name: 'Fredön'
+    description: 'Even greater and better for being outside'
+    price: 39.99
+    image: fredön.jpg
+  -
+    name: 'Hattefjäll'
+    description: 'A great office chair'
+    price: 59.99
+    image: hattefjäll.jpg
+  -
+    name: 'Hemnes'
+    description: 'The perfect nightstand for everyone'
+    price: 4.99
+    image: hemnes.jpg
+  -
+    name: 'Jättene'
+    description: 'From all the moving boxes, this one is the best'
+    price: 2.99
+    image: jättene.jpg
+    reviews:
+      - { text: 'I haved tried several different moving boxes before finally settling on this one. Perfect!', author: rapper }
+  -
+    name: 'Symfonisk'
+    description: 'Lamp and speaker in one! What else do you want in life?'
+    price: 21.99
+    image: symfonisk.jpg
+  -
+    name: 'Borstad'
+    description: 'Nothing feels more like spring than ferociously slapping your rug outside with this Borstad'
+    price: 10.99
+    image: borstad.jpg
+  -
+    name: 'Världens'
+    description: 'Yes! We also sell backpacks'
+    price: 19.99
+    quantity: 5
+    image: världens.jpg
+    reviews:
+      - { text: 'Seems impossibly endless', author: rapper }
+      - { text: 'Too bad I had to put this bag together myself as well', author: jim }
+  -
+    name: 'Gunde'
+    description: 'It is impossible to be unable to set this chair up'
+    price: 6.99
+    image: gunde.jpg
+  -
+    name: 'Pello'
+    description: 'The chair that has been popular everywhere for milennia!'
+    price: 49.99
+    image: pello.jpg
+    reviews:
+      - { text: 'Impossible to hate!', author: jim }
+  -
+    name: 'Karmsund'
+    description: 'For every moment of self appreciation'
+    price: 20.99
+    image: karmsund.jpg
+  -
+    name: 'Kex'
+    description: 'Delicious cookies. Can be <a href="/#recycle">sent back to us</a> for recycling.'
+    price: 1.89
+    image: kex.jpg
+  -
+    name: 'Solvinden'
+    description: 'Sets the perfect atmoshpere for those early spring evenings.'
+    price: 11.95
+    image: solvinden.jpg
+  -
+    name: 'Lagan'
+    description: 'Great stove! Note: does not substitute poor cooking skills'
     price: 99.99
-    image: 3d_keychain.jpg
-    fileForRetrieveBlueprintChallenge: JuiceShop.stl
-# ~~~~~ ... ~~~~~~
+    image: lagan.jpg # Exif metadata contains "OpenSCAD" as subtle hint...
+    fileForRetrieveBlueprintChallenge: JuiceShop.stl # ...to blueprint file type
+  -
+    name: 'Linnmon'
+    description: 'Excellent affordable desk'
+    price: 278.74
+    quantity: 1
+    image: linnmon.jpg
+  -
+    name: 'Markus'
+    description: 'C-suite office chair'
+    price: 99.00
+    image: markus.jpg
+    deletedDate: '2017-07-01'
+  -
+    name: 'Pax'
+    description: 'Famous in every corner of the world. Fully customizable!'
+    price: 99.99
+    image: pax.jpg
+  -
+    name: 'Skarsta'
+    description: 'With this desk you can procrastinate both standing or sitting!'
+    price: 149.99
+    image: Skarsta.jpg
+  -
+    name: 'Skymmingen'
+    description: 'As opposed to what it looks like, this does not generate wind energy'
+    price: 19.1
+    image: skymningen.jpg
+    deletedDate: '2017-09-20'
+  -
+    name: 'Tärnö'
+    description: 'Easy to set up'
+    price: 10.99
+    image: tärnö.jpg
+    reviews:
+      - { text: 'Sweet and simple, I love it!', author: morty }
+  -
+    name: 'Toftbo'
+    description: 'Keeps your feet warm in the bathroom'
+    price: 2.99
+    quantity: 3
+    image: toftbo.jpg
+  -
+    name: 'Tosterö'
+    description: 'Every barbecue fits in this'
+    price: 19.99
+    quantity: 0
+    image: tosterö.jpg
+  -
+    name: 'Tuffing'
+    description: 'Very safe bunkbed'
+    price: 99.99
+    quantity: 8
+    image: tuffing.jpg
+    reviews:
+      - { text: 'My kid fell down all the bunkbeds we had before. But not this one! Bobby is finally safe.', author: bjoernOwasp }
+  -
+    name: 'Vimle'
+    description: 'Fits nicely in every student bed room in the city centre of Amsterdam'
+    price: 999.99
+    quantity: 0
+    image: vimle.jpg
+    reviews:
+      - { text: "I had to throw everything out, but now it easily fits in my five square metres room!", author: rapper }
+  -
+    name: 'Metod'
+    description: "The fully customizable kitchen closet"
+    price: 99.00
+    quantity: 0
+    image: metod.jpg
+    reviews:
+      - { text: "My whole kitchen is Metod!", author: rapper }
+      - { text: "I have spent six hours customizing it and it's exactly how I want it", author: jim }
+      - { text: "Yes, this is indeed a closet", author: bender }
 memories:
   -
     image: 'magn(et)ificent!-1571814229653.jpg'
@@ -118,5 +312,5 @@ memories:
     user: bjoernGoogle
 ctf:
   showFlagsInNotifications: false
-  showCountryDetailsInNotifications: none
+  showCountryDetailsInNotifications: none # Options: none  name  flag  both
   countryMapping: ~
