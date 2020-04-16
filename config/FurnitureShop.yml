@@ -87,7 +87,7 @@ products:
     description: 'Nice and easy for sitting outside'
     price: 39.99
     deluxePrice: 39.49
-    image: äpplarö.jpg
+    image: äpplarö.JPG
   -
     name: 'Äpplarö'
     description: 'Even better for sitting outside'
