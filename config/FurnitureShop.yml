@@ -249,7 +249,7 @@ products:
     name: 'Skarsta'
     description: 'With this desk you can procrastinate both standing or sitting!'
     price: 149.99
-    image: Skarsta.JPG
+    image: skarsta.JPG
   -
     name: 'Skymmingen'
     description: 'As opposed to what it looks like, this does not generate wind energy'
